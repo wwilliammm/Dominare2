@@ -1,0 +1,212 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Seção Contrate Já */
+#contrate {
+    background-color: #ffffff;
+    padding: 60px 20px;
+}
+
+#contrate .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+#contrate p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Benefícios */
+.beneficios {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.beneficio {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 22%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.beneficio:hover {
+    transform: translateY(-10px);
+}
+
+.beneficio h3 {
+    font-size: 22px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.beneficio p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.cta {
+    margin-top: 50px;
+    background-color: #f4f4f4;
+    padding: 30px 20px;
+    border-radius: 8px;
+}
+
+.cta h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.btn-contratar-geral {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contratar-geral:hover {
+    background-color: #45a049;
+}
+
+/* Preços e Planos */
+.precos {
+    margin-top: 60px;
+}
+
+.planos {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.plano {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.plano h4 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.plano p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.preco {
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-contratar-plano {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contratar-plano:hover {
+    background-color: #45a049;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer i {
+    color: var(--cor3);
+    justify-self: end;
+  }

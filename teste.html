@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Aviso Dinâmico</title>
+    <style>
+        /* Estilos do modal */
+        .modal-container {
+            width: 300px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .aviso-titulo {
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #007bff;
+        }
+
+        .aviso-descricao {
+            display: none;  /* Inicialmente escondido */
+            padding: 10px 0;
+            font-size: 14px;
+            color: #333;
+            background-color: #e9ecef;
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out; /* Transição suave */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="avisos-container"></div>
+
+    <script>
+        // Dados dos avisos (em formato de array)
+        const avisos = [
+            { titulo: "Reunião de condomínio", descricao: "Aviso 1: Lembre-se da reunião de condomínio - Segunda-feira, 12/08 às 09:30." },
+            { titulo: "Fechamento do escritório", descricao: "Aviso 2: O escritório estará fechado na próxima sexta-feira, dia 20/08." },
+            { titulo: "Atualização de sistema", descricao: "Aviso 3: O sistema será atualizado no sábado, dia 21/08, entre 00:00 e 06:00." }
+        ];
+
+        // Função para criar um aviso
+        function criarAviso(titulo, descricao) {
+            const container = document.createElement('div');
+            container.classList.add('modal-container');
+
+            const avisoTitulo = document.createElement('div');
+            avisoTitulo.classList.add('aviso-titulo');
+            avisoTitulo.textContent = titulo;
+            avisoTitulo.onclick = () => toggleDescricao(avisoDescricao);
+
+            const avisoDescricao = document.createElement('div');
+            avisoDescricao.classList.add('aviso-descricao');
+            avisoDescricao.textContent = descricao;
+
+            container.appendChild(avisoTitulo);
+            container.appendChild(avisoDescricao);
+
+            return container;
+        }
+
+        // Função para alternar a visibilidade da descrição
+        function toggleDescricao(descricaoElement) {
+            descricaoElement.style.display = descricaoElement.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Função para adicionar múltiplos avisos na página
+        function adicionarAvisos() {
+            const containerAvisos = document.getElementById('avisos-container');
+            avisos.forEach(aviso => {
+                const avisoElement = criarAviso(aviso.titulo, aviso.descricao);
+                containerAvisos.appendChild(avisoElement);
+            });
+        }
+
+        // Adiciona os avisos na página ao carregar
+        adicionarAvisos();
+    </script>
+
+</body>
+</html>
